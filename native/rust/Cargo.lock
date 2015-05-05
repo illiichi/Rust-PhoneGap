@@ -1,0 +1,4 @@
+[root]
+name = "hello-rust-lib"
+version = "0.1.0"
+

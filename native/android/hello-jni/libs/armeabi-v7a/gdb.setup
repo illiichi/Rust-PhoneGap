@@ -1,0 +1,3 @@
+set solib-search-path /Users/vmlinz/Projects/rust/cordova-plugin-hello/native/android/hello-jni/obj/local/armeabi-v7a
+source /usr/local/Cellar/android-ndk/r10d/prebuilt/common/gdb/common.setup
+directory /usr/local/Cellar/android-ndk/r10d/platforms/android-21/arch-arm/usr/include /usr/local/Cellar/android-ndk/r10d/sources/cxx-stl/gnu-libstdc++ /Users/vmlinz/Projects/rust/cordova-plugin-hello/native/android/hello-jni/jni

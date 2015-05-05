@@ -1,0 +1,7 @@
+[lib]
+name = "hello_rust"
+crate_type = ["staticlib"]
+[package]
+name = "hello-rust-lib"
+version = "0.1.0"
+authors = ["Zaicheng Qi <vmlinz@gmail.com>"]
