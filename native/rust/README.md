@@ -2,6 +2,10 @@
 
 ## create fat lib for ios ##
 
-* `find target -name "*.a" | grep ios | xargs lipo -create -output "libhello_rust-ios.a"`
+* `find target -name "*.a" | grep ios | grep rust | xargs lipo -create -output "libhello_rust-ios.a"`
 
-* "cp `find target -name "*.a" | grep "linux"` libhello_rust-android.a"
+* "cp `find target -name "*.a" | grep linux | grep rust` libhello_rust-android.a"
+
+* `cp libhello_rust-android.a ../android/hello-jni/jni/libhello_rust-android.a`
+
+* `cp libhello_rust-ios.a ../ios/libhello_rust-ios.a`
