@@ -14,7 +14,7 @@ public class Hello extends CordovaPlugin {
         if (action.equals("greet")) {
             String name = data.getString(0);
             String jni = HelloJni.stringFromJNI();
-            String message = "Hello, " + name + ", " jni;
+            String message = "Hello, " + name + ", " + jni;
             callbackContext.success(message);
 
             return true;

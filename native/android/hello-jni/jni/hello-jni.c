@@ -64,7 +64,10 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
     int out = add(3, 4);
     __android_log_print(ANDROID_LOG_DEBUG, "Hello Rust", "3 + 4 = %d", out);
 
-    return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI ".");
+    const char *msg = hello();
+    __android_log_print(ANDROID_LOG_DEBUG, "Hello Rust", "%s", msg);
+
+    return (*env)->NewStringUTF(env, msg);
 }
 
 void _Unwind_GetIP(){}
