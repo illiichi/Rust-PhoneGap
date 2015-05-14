@@ -21,7 +21,7 @@ public class HelloJni
      * 'hello-jni' native library, which is packaged
      * with this application.
      */
-    public native String  stringFromJNI();
+    public static native String  stringFromJNI();
 
     static {
         System.loadLibrary("hello-jni");

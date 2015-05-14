@@ -24,6 +24,12 @@
     </config-file>
 
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+
+    <source-file src="native/android/hello-jni/src/com/example/hellojni/HelloJni.java" target-dir="src/com/example/hellojni/"/>
+
+    <source-file src="native/android/hello-jni/libs/armeabi/libhello-jni.so" target-dir="libs/armeabi" />
+
+    <source-file src="native/android/hello-jni/libs/armeabi-v7a/libhello-jni.so" target-dir="libs/armeabi-v7a" />
   </platform>
 
   <platform name="ios">
@@ -36,10 +42,6 @@
 
     <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
     <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
   </platform>
 
 </plugin>
