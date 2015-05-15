@@ -42,6 +42,12 @@
 
     <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
     <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
+    <header-file src="native/rust/src/hello_rust.h" target-dir="HelloPlugin"/>
+    <source-file src="native/ios/libhello_rust-ios.a" framework="true" target-dir="HelloPlugin" compiler-flags="-fno-objc-arc"/>
+
+    <framework src="Foundation.framework" />
+    <framework src="Security.framework" />
+
   </platform>
 
 </plugin>

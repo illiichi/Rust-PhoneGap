@@ -1,2 +1,7 @@
-extern unsigned add(unsigned lhs, unsigned rhs);
-extern char * hello();
+#ifndef HELLO_RUST_H
+#define HELLO_RUST_H
+
+unsigned add(unsigned lhs, unsigned rhs);
+char * hello();
+
+#endif

@@ -1,4 +1,5 @@
 #import "HWPHello.h"
+#import "hello_rust.h"
 
 @implementation HWPHello
 
@@ -6,8 +7,7 @@
 {
 
     NSString* callbackId = [command callbackId];
-    NSString* name = [[command arguments] objectAtIndex:0];
-    NSString* msg = [NSString stringWithFormat: @"Hello, %@", name];
+    NSString* msg = [NSString stringWithUTF8String: hello()];
 
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
