@@ -20,7 +20,7 @@ Cordova commandline tool installation
 
 	$ brew install nodejs
 	$ brew install npm
-	$ [sudo] npm install -g cordova
+	$ [sudo] npm install -g cordova@4.3.0
 
 Build the rust cross compiler for android and ios
 
