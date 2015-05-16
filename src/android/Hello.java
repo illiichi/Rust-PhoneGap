@@ -12,10 +12,8 @@ public class Hello extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("greet")) {
-            String name = data.getString(0);
-            String jni = HelloJni.stringFromJNI();
-            String message = "Hello, " + name + ", " + jni;
-            callbackContext.success(message);
+            String jniMessage = HelloJni.stringFromJNI();
+            callbackContext.success(jniMessage);
 
             return true;
         } else {

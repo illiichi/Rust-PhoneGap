@@ -7,7 +7,12 @@
 {
 
     NSString* callbackId = [command callbackId];
-    NSString* msg = [NSString stringWithUTF8String: hello()];
+
+    const char* rust_msg = hello();
+    char rust_msg_copy[128] = { 0 };
+    strncpy(rust_msg_copy, rust_msg, sizeof(rust_msg_copy));
+    
+    NSString* msg = [[NSString alloc] initWithUTF8String:rust_msg_copy];
 
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK

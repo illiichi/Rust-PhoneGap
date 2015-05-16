@@ -61,9 +61,6 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
    #define ABI "unknown"
 #endif
 
-    int out = add(3, 4);
-    __android_log_print(ANDROID_LOG_DEBUG, "Hello Rust", "3 + 4 = %d", out);
-
     const char *msg = hello();
     __android_log_print(ANDROID_LOG_DEBUG, "Hello Rust", "%s", msg);
 
